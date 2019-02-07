@@ -3,6 +3,9 @@ Changelog
 
 Unreleased
 ----------
+### Added
+* Role property added to utility menu
+* Jest test added for role property
 
 2.1.0 - (February 5, 2019)
 ------------------

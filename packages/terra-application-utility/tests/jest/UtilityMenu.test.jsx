@@ -96,4 +96,40 @@ describe('UtilityMenu', () => {
     const wrapper = shallow(component);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should render with a user specified role', () => {
+    const role = 'menu';
+    const component = (
+      <IntlProvider locale={locale} messages={messages}>
+        <HeaderUtilityMenu
+          initialSelectedKey="key"
+          menuItems={config}
+          onChange={mockOnChange}
+          onDisclose={mockOnDisclose}
+          variant={variant}
+          role={role}
+          id="test"
+        />
+      </IntlProvider>);
+    const wrapper = shallow(component);
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should render with a default role', () => {
+    const defaultRole = 'navigation';
+    const component = (
+      <IntlProvider locale={locale} messages={messages}>
+        <HeaderUtilityMenu
+          initialSelectedKey="key"
+          menuItems={config}
+          onChange={mockOnChange}
+          onDisclose={mockOnDisclose}
+          variant={variant}
+          role={defaultRole}
+          id="test"
+        />
+      </IntlProvider>);
+    const wrapper = shallow(component);
+    expect(wrapper).toMatchSnapshot();
+  });
 });
