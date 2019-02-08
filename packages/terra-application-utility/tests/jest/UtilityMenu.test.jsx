@@ -112,6 +112,7 @@ describe('UtilityMenu', () => {
         />
       </IntlProvider>);
     const wrapper = shallow(component);
+    expect(wrapper.prop('role')).toBe(role);
     expect(wrapper).toMatchSnapshot();
   });
 
@@ -130,6 +131,7 @@ describe('UtilityMenu', () => {
         />
       </IntlProvider>);
     const wrapper = shallow(component);
+    expect(wrapper.prop('role')).toBe(defaultRole);
     expect(wrapper).toMatchSnapshot();
   });
 });

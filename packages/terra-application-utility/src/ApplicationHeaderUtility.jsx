@@ -30,6 +30,10 @@ const propTypes = {
    * The accessory element to be displayed next to the title.
    */
   accessory: PropTypes.element,
+  /**
+   * Role attribute on the Application Header Utility.
+   */
+  role: PropTypes.string,
 };
 
 const ApplicationHeaderUtility = ({
@@ -39,6 +43,7 @@ const ApplicationHeaderUtility = ({
   initialSelectedKey,
   title,
   accessory,
+  role,
   ...customProps
 }) => (
   <UtilityButton
@@ -49,6 +54,7 @@ const ApplicationHeaderUtility = ({
     initialSelectedKey={initialSelectedKey}
     title={title}
     accessory={accessory}
+    role={role}
     variant={Utils.VARIANTS.HEADER}
   />
 );

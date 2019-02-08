@@ -67,4 +67,19 @@ describe('ApplicationMenuUtility', () => {
     />);
     expect(wrapper).toMatchSnapshot();
   });
+
+  it('should render with a user specified role', () => {
+    const role = 'menu';
+    const wrapper = shallow(<ApplicationMenuUtility
+      menuItems={[]}
+      onChange={mockOnChange}
+      onDisclose={mockOnDisclose}
+      onRequestClose={mockOnRequestClose}
+      initialSelectedKey={initialSelectedKey}
+      title={title}
+      role={role}
+    />);
+    expect(wrapper.prop('role')).toBe(role);
+    expect(wrapper).toMatchSnapshot();
+  });
 });

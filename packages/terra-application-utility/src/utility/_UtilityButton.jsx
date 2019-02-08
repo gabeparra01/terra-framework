@@ -42,6 +42,10 @@ const propTypes = {
    */
   accessory: PropTypes.element,
   /**
+   * Role attribute of Utlity Menu.
+   */
+  role: PropTypes.string,
+  /**
    * Sets the Utility variant.
    */
   variant: PropTypes.oneOf([Utils.VARIANTS.HEADER, Utils.VARIANTS.MENU]).isRequired,
@@ -72,6 +76,7 @@ class ApplicationHeaderUtility extends React.Component {
     return (
       <UtilityMenu
         initialSelectedKey={this.props.initialSelectedKey}
+        role={this.props.role}
         menuItems={this.props.menuItems}
         onChange={this.props.onChange}
         variant={this.props.variant}
